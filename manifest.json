@@ -1,0 +1,19 @@
+{
+  "name": "Chrome Extension with Preact and Webpack",
+  "description": "",
+  "version": "1",
+  "action": {
+    "default_title": "My Chrome Extension",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
